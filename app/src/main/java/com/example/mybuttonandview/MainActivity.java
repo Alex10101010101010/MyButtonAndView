@@ -1,10 +1,10 @@
 package com.example.mybuttonandview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView startIv;
@@ -27,24 +27,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onClickButton() {
-        boolean isStart = true;
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isStart) {
+                if (v.getId() == startIv.getId()) {
                     colossusIv.setVisibility(View.VISIBLE);
                     startIv.setVisibility(View.INVISIBLE);
-
-                } else {
+                } else if (v.getId() == colossusIv.getId()) {
+                    colossusIv.setVisibility(View.INVISIBLE);
+                    handingGardensSemramsIv.setVisibility(View.VISIBLE);
+                } else if (v.getId() == handingGardensSemramsIv.getId()) {
                     handingGardensSemramsIv.setVisibility(View.INVISIBLE);
                     lighthouseAlexandriaIv.setVisibility(View.VISIBLE);
-
+                } else if (v.getId() == lighthouseAlexandriaIv.getId()) {
+                    lighthouseAlexandriaIv.setVisibility(View.INVISIBLE);
+                    mausoleumHalicornassusIv.setVisibility(View.VISIBLE);
+                } else if (v.getId() == mausoleumHalicornassusIv.getId()) {
+                    mausoleumHalicornassusIv.setVisibility(View.INVISIBLE);
+                    pyramidCheopsIv.setVisibility(View.VISIBLE);
+                } else if (v.getId() == pyramidCheopsIv.getId()) {
+                    pyramidCheopsIv.setVisibility(View.INVISIBLE);
+                    statueZeusOlympiaIv.setVisibility(View.VISIBLE);
+                } else if (v.getId() == statueZeusOlympiaIv.getId()) {
+                    statueZeusOlympiaIv.setVisibility(View.INVISIBLE);
+                    templeArtemisEphesusIv.setVisibility(View.VISIBLE);
+                } else if (v.getId() == templeArtemisEphesusIv.getId()) {
+                    templeArtemisEphesusIv.setVisibility(View.INVISIBLE);
+                    androshaIv.setVisibility(View.VISIBLE);
+                } else {
+                    androshaIv.setVisibility(View.INVISIBLE);
                 }
             }
         };
-        startIv.setOnClickListener(listener);
-        colossusIv.setOnClickListener(listener);
 
+        startIv.setOnClickListener(listener);
+        androshaIv.setOnClickListener(listener);
+        handingGardensSemramsIv.setOnClickListener(listener);
+        lighthouseAlexandriaIv.setOnClickListener(listener);
+        mausoleumHalicornassusIv.setOnClickListener(listener);
+        pyramidCheopsIv.setOnClickListener(listener);
+        statueZeusOlympiaIv.setOnClickListener(listener);
+        templeArtemisEphesusIv.setOnClickListener(listener);
+        colossusIv.setOnClickListener(listener);
     }
 
     private void intView(){
