@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MyButtonAndView</string>
+    <string name="finish">Ура, донажимались</string>
+    <string name="start">Start</string>
+    <string name="androsha">Androsha</string>
+    <string name="colossus">Колосс Родосский</string>
+    <string name="handing_gardens_semrams">Висячии сады Симиромиды</string>
+    <string name="lighthouse_alexandria">Александрийский Мояк</string>
+    <string name="mausoleum_in_halicornassus">Мовзалей в Галикорнии</string>
+    <string name="pyramid_of_cheops">Пирамида Хеопса</string>
+    <string name="temple_of_artemis_in_ephesus">Храм Артемиды Эфесской</string>
+    <string name="statue_of_zeus_in_olympia">Статуя Зевса в Олипии</string>
+    <string name="end">КОНЕЦ</string>
 </resources>
