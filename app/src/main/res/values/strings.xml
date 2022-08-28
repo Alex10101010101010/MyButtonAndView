@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MyButtonAndView</string>
+    <string name="night">Ночь</string>
+    <string name="day">День</string>
+    <string name="morning">Утро</string>
+    <string name="evening">Вечер</string>
+
+    <string name="answerDey">УРА, сейчас день ! ПОРА ПОЛИТЬ РОЗУ !</string>
+    <string name="answerNight">Наступила ночь ! ПОШЛИ СМОТРЕТЬ ЗВЕЗДЫ !</string>
+    <string name="answerMorning">УТРО ! ПОРА ПОЛОТЬ БАОБАБЫ !</string>
+    <string name="answerEvening">Вечер пришел ! ПОРА ЗАКРЫВАТЬ РОЗУ !</string>
 </resources>
