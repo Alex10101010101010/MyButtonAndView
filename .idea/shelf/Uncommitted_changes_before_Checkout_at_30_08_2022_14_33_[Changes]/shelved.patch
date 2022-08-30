@@ -1,0 +1,31 @@
+Index: app/src/main/java/com/example/mybuttonandview/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mybuttonandview;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.ImageView;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport java.util.Calendar;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    private int hour;\r\n    private int minute;\r\n\r\n    private Button morningButton;\r\n    private Button dayButton;\r\n    private Button eveningButton;\r\n    private Button nightButton;\r\n\r\n    private ImageView image;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        image = findViewById(R.id.main_image_view);\r\n    }\r\n\r\n    public void okToast(String text) {\r\n        text = text + \"\\nСейчас \" + withZero(this.hour) + \":\" + withZero(this.minute) + \".\";\r\n        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();\r\n    }\r\n\r\n    public void wrongToast(String text) {\r\n        text = text + \"\\nСейчас \" + withZero(this.hour) + \":\" + withZero(this.minute) + \".\";\r\n        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();\r\n    }\r\n\r\n    public void dayButtonClick(View view) {\r\n        hour = Calendar.getInstance().getTime().getHours();\r\n        minute = Calendar.getInstance().getTime().getMinutes();\r\n        if (hour >= 11 && hour < 17) {\r\n            okToast(\"УРА, сейчас день ! ПОРА ПОЛИТЬ РОЗУ !\");\r\n            image.setImageResource(R.drawable.day);\r\n        } else {\r\n            wrongToast(\"ЭЙ ! Да разве ж сейчас день?\");\r\n        }\r\n    }\r\n\r\n    public void eveningButtonClick(View view) {\r\n        hour = Calendar.getInstance().getTime().getHours();\r\n        minute = Calendar.getInstance().getTime().getMinutes();\r\n        if (hour >= 17 && hour < 24) {\r\n            okToast(\"Вечер пришел ! ПОРА ЗАКРЫВАТЬ РОЗУ !\");\r\n            image.setImageResource(R.drawable.evening);\r\n\r\n        } else {\r\n            wrongToast(\"Нет, сейчас еще не ночь !!!\");\r\n        }\r\n    }\r\n\r\n    public void nightButtonClick(View view) {\r\n        hour = Calendar.getInstance().getTime().getHours();\r\n        minute = Calendar.getInstance().getTime().getMinutes();\r\n        if (hour >= 0 && hour < 6) {\r\n            okToast(\"Наступила ночь ! ПОШЛИ СМОТРЕТЬ ЗВЕЗДЫ !\");\r\n            image.setImageResource(R.drawable.night);\r\n\r\n        } else {\r\n            wrongToast(\"Сейчас не ночь, ты ошибся\");\r\n        }\r\n    }\r\n\r\n    public void morningButtonClick(View view) {\r\n        hour = Calendar.getInstance().getTime().getHours();\r\n        minute = Calendar.getInstance().getTime().getMinutes();\r\n        if (hour >= 6 && hour < 11) {\r\n            okToast(\"УТРО ! ПОРА ПОЛОТЬ БАОБАБЫ !\");\r\n            image.setImageResource(R.drawable.morning);\r\n\r\n        } else {\r\n            wrongToast(\"ЭЙ ! СЕЙЧАС ДАЛЕКО НЕ УТРО !\");\r\n        }\r\n    }\r\n\r\n    private String withZero(int time) {\r\n        String result;\r\n        if (time < 10) {\r\n            result = \"0\" + time;\r\n        } else {\r\n            result = String.valueOf(time);\r\n        }\r\n        return result;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/mybuttonandview/MainActivity.java b/app/src/main/java/com/example/mybuttonandview/MainActivity.java
+--- a/app/src/main/java/com/example/mybuttonandview/MainActivity.java	
++++ b/app/src/main/java/com/example/mybuttonandview/MainActivity.java	
+@@ -88,12 +88,13 @@
+     }
+ 
+     private String withZero(int time) {
+-        String result;
+-        if (time < 10) {
+-            result = "0" + time;
+-        } else {
+-            result = String.valueOf(time);
+-        }
+-        return result;
++//        String result;
++//        if (time < 10) {
++//            result = "0" + time;
++//        } else {
++//            result = String.valueOf(time);
++//        }
++//        return result;
++        return time < 10? "0" + time : String.valueOf(time); // Короткая за пись
+     }
+ }

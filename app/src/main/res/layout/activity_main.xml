@@ -6,13 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="   "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blue" />
+
+        <RadioButton
+            android:id="@+id/red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
