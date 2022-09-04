@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2355" />
+        <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/drawable/myButton.xml" value="0.2355" />
+        <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/drawable/mybutton.xml" value="0.2355" />
+        <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/drawable/text_input.xml" value="0.2355" />
+        <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/layout-land/activity_main_all.xml" value="0.30952380952380953" />
         <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/layout/activity_main.xml" value="0.36685773840541946" />
+        <entry key="..\:/Users/a2707/AndroidStudioProjects/MyButtonAndView/app/src/main/res/layout/activity_main_all.xml" value="0.365625" />
       </map>
     </option>
   </component>
