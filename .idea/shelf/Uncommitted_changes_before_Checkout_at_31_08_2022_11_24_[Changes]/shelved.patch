@@ -1,0 +1,138 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".MainActivity\">\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision d1dd7bbb66b4b4ab8322f59cb14965e76838af23)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1661934195129)
+@@ -1,8 +1,126 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".MainActivity">
+ 
++    <Button
++        android:id="@+id/button"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="8"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/button2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="5"
++        app:layout_constraintBottom_toTopOf="@+id/button"
++        app:layout_constraintEnd_toEndOf="@+id/button" />
++
++    <Button
++        android:id="@+id/two"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="2"
++        app:layout_constraintBottom_toTopOf="@+id/button2"
++        app:layout_constraintEnd_toEndOf="@+id/button2" />
++
++    <Button
++        android:id="@+id/button4"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="7"
++        app:layout_constraintBottom_toBottomOf="@+id/button"
++        app:layout_constraintEnd_toStartOf="@+id/two" />
++
++    <Button
++        android:id="@+id/button5"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="4"
++        app:layout_constraintBottom_toTopOf="@+id/button4"
++        app:layout_constraintEnd_toStartOf="@+id/button2" />
++
++    <Button
++        android:id="@+id/one"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="1"
++        app:layout_constraintBottom_toTopOf="@+id/button5"
++        app:layout_constraintEnd_toStartOf="@+id/two" />
++
++    <Button
++        android:id="@+id/three"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="3"
++        app:layout_constraintBottom_toTopOf="@+id/button2"
++        app:layout_constraintStart_toEndOf="@+id/two" />
++
++    <Button
++        android:id="@+id/button8"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="6"
++        app:layout_constraintStart_toEndOf="@+id/button2"
++        app:layout_constraintTop_toBottomOf="@+id/three" />
++
++    <Button
++        android:id="@+id/button9"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="9"
++        app:layout_constraintEnd_toEndOf="@+id/button8"
++        app:layout_constraintTop_toBottomOf="@+id/button8" />
++
++    <Button
++        android:id="@+id/button10"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="0"
++        app:layout_constraintEnd_toEndOf="@+id/button"
++        app:layout_constraintTop_toBottomOf="@+id/button" />
++
++    <Button
++        android:id="@+id/equal"
++        app:layout_constraintEnd_toEndOf="@+id/button10"
++        app:layout_constraintTop_toBottomOf="@+id/button10"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="="
++        tools:layout_editor_absoluteX="63dp"
++        tools:layout_editor_absoluteY="115dp" />
++
++    <Button
++        android:id="@+id/minus"
++        app:layout_constraintStart_toStartOf="@+id/button4"
++        app:layout_constraintTop_toBottomOf="@+id/button4"
++        android:layout_width="90dp"
++        android:layout_height="90dp"
++        android:backgroundTint="#FF9800"
++        android:text="-"
++        android:textColor="#E80404"
++        android:textSize="70sp"
++        tools:layout_editor_absoluteX="248dp"
++        tools:layout_editor_absoluteY="282dp" />
++
++    <Button
++        android:id="@+id/plus"
++        app:layout_constraintEnd_toStartOf="@+id/equal"
++        app:layout_constraintStart_toStartOf="@+id/minus"
++        app:layout_constraintTop_toBottomOf="@+id/minus"
++        android:layout_width="90dp"
++        android:layout_height="90dp"
++        android:backgroundTint="#FF9800"
++        android:text="+"
++        android:textColor="#E10808"
++        tools:layout_editor_absoluteX="63dp"
++        tools:layout_editor_absoluteY="363dp" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
