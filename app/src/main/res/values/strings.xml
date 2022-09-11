@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyButtonAndView</string>
+    <string name="app_name">Калкулятор</string>
     <string name="reset">C</string>
     <string name="seven">7</string>
     <string name="eight">8</string>
